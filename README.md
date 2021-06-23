@@ -3,7 +3,10 @@ https://user-images.githubusercontent.com/37477845/123132746-06d30480-d48a-11eb-
 
 
 単眼デプス推定で推定した相対距離をシンプルなキャリブレーションで絶対距離へ変換するプログラムです。<br>
-2点以上の実測値から最小二乗法で1次関数へ近似します。
+2点以上の実測値から最小二乗法で1次関数へ近似します。<br>
+
+本リポジトリでは単眼デプス推定に[MiDaS v2.1 small](https://github.com/intel-isl/MiDaS)を使用しています。<br>
+ONNXモデルは[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/081_MiDaS_v2)のモデルを使用しています。
 
 # Requirement 
 * opencv-python 4.5.2.54 or later
@@ -46,6 +49,10 @@ def model_load():
 
     return model_run
 ```
+
+# Reference
+* [MiDaS](https://github.com/intel-isl/MiDaS)
+* [PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/081_MiDaS_v2)
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
